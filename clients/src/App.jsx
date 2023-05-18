@@ -1,4 +1,5 @@
 import React from 'react'
+import './App.css'
 import Edit from './components/Edit'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Form from './components/Form'
