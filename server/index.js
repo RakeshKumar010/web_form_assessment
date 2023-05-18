@@ -9,8 +9,8 @@ app.use(express.json())
 app.use(require('./router/router'))
 
 
-const port = 8080;
+const PORT =process.env.PORT ||8080;
 
-app.listen(port,()=>{
-    console.log('server is open at localhost:'+port);
+app.listen(PORT,()=>{
+    console.log('server is open at localhost:'+PORT);
 })
