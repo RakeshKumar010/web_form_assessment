@@ -17,7 +17,7 @@ const Form = () => {
     }
     const submitFun = async(e)=>{
         e.preventDefault()
-       let result = await fetch('http://localhost:8080/',{
+       let result = await fetch('https://web-form-assessment.onrender.com/',{
         method:"post",
         body:JSON.stringify(data),
         headers:{'content-type':'application/json'}

@@ -4,7 +4,7 @@ const AllData = () => {
     const [data, setData] = useState()
     useEffect(() => {
         async function getFun() {
-            let result = await fetch('http://localhost:8080/', {
+            let result = await fetch('https://web-form-assessment.onrender.com/', {
                 method: "get",
                 headers: { 'content-type': 'application/json' },
             })
@@ -36,7 +36,7 @@ const AllData = () => {
                             <p className='email'>{val.email}</p>
                             <div><button>  <Link to={`/edit/${val._id}`}>Edit</Link></button></div>
                             <div> <button onClick={async()=>{
-                                let result = await fetch(`http://localhost:8080/${val._id}`,{
+                                let result = await fetch(`https://web-form-assessment.onrender.com/${val._id}`,{
                                     method:"delete",
                                     headers:{"content-type":"application/json"}
                                 })

@@ -11,7 +11,7 @@ const Form = () => {
     const [boot,setBool]=useState(false)
     useEffect(()=>{
         async function getFun(){
-            let result = await fetch('http://localhost:8080/edit/'+prames.id,{
+            let result = await fetch('https://web-form-assessment.onrender.com/edit/'+prames.id,{
                 method:"get",
                 headers:{'content-type':'application/json'}
             })
@@ -26,7 +26,7 @@ const Form = () => {
    
     const submitFun = async(e)=>{
         e.preventDefault()
-       let result = await fetch('http://localhost:8080/edit/'+prames.id,{
+       let result = await fetch('https://web-form-assessment.onrender.com/edit/'+prames.id,{
         method:"put",
         body:JSON.stringify({name,email,number}),
         headers:{'content-type':'application/json'}
